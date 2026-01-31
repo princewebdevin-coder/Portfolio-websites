@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+}
+
+/* NAVBAR */
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* HOME */
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+.home-img img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+/* TEXT */
+.home-content h1{
+    font-size: 6rem;
+}
+
+.home-content h1 span{
+    color: #b74b4b;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+}
+
+/* TYPING TEXT FIX */
+.typing-text{
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+
+.typing-text span{
+    position: relative;
+    color: #b74b4b;
+}
+
+/* changing words */
+.typing-text span::before{
+    content: "Developer";
+    animation: words 20s infinite;
+}
+
+/* cursor */
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 2px;
+    height: 100%;
+    background-color: #b74b4b;
+    animation: cursor 0.7s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes cursor{
+    0%,50%{opacity:1;}
+    51%,100%{opacity:0;}
+}
+
+@keyframes words{
+    0%,20%{content:"Web ";}
+    21%,40%{content:"";}
+    41%,60%{content:"Web Designer";}
+    61%,80%{content:"Youtuber";}
+    81%,100%{content:"Script Writer";}
+}
+
+/* SOCIAL ICONS */
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 50%;
+    margin: 2rem 1.5rem 2rem 0;
+    color: #b74b4b;
+    font-size: 2rem;
+}
+
+.social-icons a:hover{
+    background: #b74b4b;
+    color: black;
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    border: 2px solid #b74b4b;
+    color: #b74b4b;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background: #b74b4b;
+    color: black;
+}
+
+/* RESPONSIVE */
+@media(max-width: 995px){
+    .home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img{
+        width: 70vw;
+    }
+}
